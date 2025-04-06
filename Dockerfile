@@ -6,8 +6,7 @@ USER root
 
 # Install Docker CLI and ffmpeg
 RUN apk add --no-cache docker-cli ffmpeg
-RUN apk add --update python3 py3-pip gcc python3-dev musl-dev curl ffmpeg
-RUN apk add --update python3 py3-pip curl && pip3 install --upgrade yt-dlp
+RUN apk add --update python3 py3-pip gcc python3-dev musl-dev curl ffmpeg yt-dlp
 
 # Create the docker group if it does not exist and add the 'node' user to it
 RUN addgroup -S docker || true
